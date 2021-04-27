@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html>
+    <% const titleName = 'みんちゅんの進捗管理' %>
     <head>
         <meta charset="utf-8">
-        <title>みんちゅんの進捗管理</title>
+        <title><%= titleName %></title>
         <link rel="stylesheet" href="/css/stylesheet.css">
     </head>
 
     <header>
-        <div class="header-title">みんちゅんの進捗確認</div> 
+        <div class="header-title"><%= titleName %></div> 
             <form class="header-button"　action="/" method="post">
-                <input type="text">
-                <input type="text">
+                <input type="text" name="addSubject" placeholder="科目を指定">
+                <input type="text" name="addClassStyle" placeholder="授業形態を指定">
                 <input type="submit" value="科目追加"></button>
             </form>
     </header>
     
     <body>
-        <div class="item-name">
-            <ul>
-                <li class="subject">科目</li>
-                <li>授業形態</li>
-                <li>残り</li>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                <li>10</li>
-                <li>11</li>
-                <li>12</li>
-                <li>13</li>
-                <li>14</li>
-                <li>15</li>
-            </ul>
+        <div class="index-table-wrapper">
+            <div class="table-head">
+                <span class="id-subject">科目</span>
+                <span class="id-classStyle">授業形態</span>
+                <span class="id-reaming">残り</span>
+                <% for (i = 0; i<15; i++){ %>
+                    <span class="id-case"><%= i+1 %></span>
+                <% } %>
+            </div>
 
+            <!--DBから値を出すまでの練習-->
+            <% const items =[
+                {name: 'Javaの基本',cl:'オンライン'},
+                {name: '物質とエネルギー',cl:'テレビ'}
+                ]; %>
+
+                <% items.forEach((item)=>{ %>
+                    <div class ="table-body">
+                        <span class="id-subject">
+                            <%= item.name %>
+                        </span>
+                        <span class="id-classStyle">
+                            <%= item.cl %>
+                        </span>
+                    </div>
+                <% }); %>
 
         </div>
-
     </body>
 </html>
