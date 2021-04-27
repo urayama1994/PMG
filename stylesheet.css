@@ -3,7 +3,7 @@
   }
 
   header{
-    height: 40px;
+    height: 60px;
     width: 100%;
     background-color: rgba(36, 128, 146, 0.9);
   }
@@ -12,22 +12,49 @@
     color:white;
     margin:5px;
     float:left;
+    font-size: 20px;
   }
 
   .header-button{
     float:right;
-    margin:5px;
+    margin:10px;
   }
 
-  .Subject{
-    float:left;
-    padding:15px;
+  .table-head{
+    display: flex;
+    background-color: #b7cadc;
+    border-radius: 2px 2px 0 0;
+    height: 44px;
+    font-size: 16px;
+    line-height: 46px;
+    color: #ffffff;
   }
 
-  .item-name li{
-    list-style: none;
-    float:left;
-    padding:15px;
-    
+
+  .table-body {
+    background-color: #ffffff;
+    height: 50px;
+    border: 1px solid #f0f4f9;
+    display: flex;
+    align-items: center;
   }
 
+  .id-subject{
+    width: 200px;
+    text-align: center;
+  }
+
+  .id-classStyle{
+    width: 100px;
+    text-align: center;
+  }
+
+  .id-reaming{
+    width: 80px;
+    text-align: center;
+  }
+
+  .id-case{
+    width: 80px;
+    text-align: center;
+  }
